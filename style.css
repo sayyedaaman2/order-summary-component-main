@@ -1,0 +1,221 @@
+
+:root{
+    /* Colors  */
+
+    --clr-neutral-200 : hsl(225,100%,98%);
+    --clr-neutral-400 : hsl(224,23%,55%);
+    --clr-neutral-900 : hsl(223,47%,23%);
+    --clr-music : hsl(230, 100%, 95%);
+    --clr-pale-blue : hsl(225,100%,94%);
+    --clr-bright-blue : hsl(245,75%,52%);
+
+    /* Font Families  */
+
+    --ff-serif : "Red Hat Display", sans-serif;
+
+    /* Font Weight  */
+
+    --fw-normal : 500;
+    --fw-bold : 700;
+    --fw-extra-bold : 900;
+
+    /* Typography  */
+
+    --fs-400 : 1rem;
+    --fs-900 : clamp(1.5rem, 2vh, 2rem);
+}
+
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+
+html{
+    font-family: var(--fs-serif,"Red Hat Display", sans-serif);
+}
+
+body {
+    min-height: 100vh;
+ 
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat : no-repeat;
+    background-size: contain;
+    background-color: var(--clr-neutral-200);
+
+    color : var(--clr-neutral-400);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+
+    display: flex;
+    flex-direction: column;
+}
+h1,h2,h3,h4{
+    font-size: 1rem;
+}
+a{
+    font-size: inherit;
+}
+
+img{
+    max-inline-size: 100%;
+    display: block;
+   
+}
+button{
+    color : inherit;
+}
+
+.bg-neutral-900{
+    background-color: var(--clr-neutral-900);
+}
+
+.bg-neutral-400{
+    background-color: var(--clr-neutral-400);
+}
+.bg-neutral-200{
+    background-color: var(--clr-neutral-200);
+}
+
+
+.bg-pale-blue{
+    background-color: var(--clr-pale-blue);
+}
+.bg-bright-blue{
+    background-color: var(--clr-bright-blue);
+}
+
+
+
+.text-neutral-900{
+    color: var(--clr-neutral-900);
+}
+
+.text-neutral-400{
+    color: var(--clr-neutral-400);
+}
+.text-neutral-200{
+    color: var(--clr-neutral-200);
+}
+
+
+.text-pale-blue{
+    color: var(--clr-pale-blue);
+}
+.text-bright-blue{
+    color: var(--clr-bright-blue);
+}
+
+
+
+.ff-serif{
+    font-family: var(--ff-serif);
+}
+
+
+
+
+
+.fw-normal {
+    font-weight: var(--fw-normal);
+}
+
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-extra-bold {
+    font-weight: var(--fw-extra-bold);
+}
+
+
+.fs-400{
+    font-size: var(--fs-400);
+}
+.fs-900{
+    font-size: var(--fs-900);
+}
+
+
+.flow > *:not(:last-child) {
+    margin-bottom: var(--flow-gap, 1.5rem);
+}
+
+
+
+main{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+
+
+.wrapper{
+    flex : 1;
+    position: relative;
+    padding-inline: 1.5rem;
+    display: grid;
+    place-content: center;
+  
+}
+
+
+
+
+
+.card{
+    --br : 1rem;
+    border : 1px solid;
+    border-radius: var(--br);
+    max-width: 380px;
+    text-align: center;
+    /* display: none; */
+    overflow: hidden;
+}
+
+
+
+
+.card__detail{
+    padding: 1.5rem;
+
+}
+
+.card__pricing{
+    background-color: var(--clr-music);
+    padding : 1rem;
+    display: flex;
+    align-items: center;
+    gap : 1rem;
+    text-align: left;
+    border-radius: 12px;
+}
+
+.card__pricing > img{
+    width: 35px;
+    border-radius: 100%;
+    background-color: var(--clr-pale-blue);
+}
+
+.card__price{
+    flex : 1;
+}
+
+
+
+button {
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: var(--br);
+    border : 0px;
+    font-weight: var(--fw-bold);
+    background: transparent;
+}
+
+.shadow-bottom{
+    box-shadow: 0px 10px 20px -10px var(--clr-neutral-400);
+}
